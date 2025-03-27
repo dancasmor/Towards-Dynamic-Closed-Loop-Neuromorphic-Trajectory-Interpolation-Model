@@ -1,0 +1,46 @@
+{
+	"neuronParameters": {
+		"OutRingLayer": {
+			"cm": 0.27,
+			"i_offset": 0.0,
+			"tau_m": 3.0,
+			"tau_refrac": 1.0,
+			"tau_syn_E": 0.3,
+			"tau_syn_I": 0.3,
+			"v_reset": -60.0,
+			"v_rest": -60.0,
+			"v_thresh": -57.0},
+		"InnerRingLayer": {
+			"cm": 0.1,
+			"i_offset": 0.0,
+			"tau_m": 0.1,
+			"tau_refrac": 0.0,
+			"tau_syn_E": 0.1,
+			"tau_syn_I": 0.1,
+			"v_reset": -60.0,
+			"v_rest": -60.0,
+			"v_thresh": -59.91}
+	},
+	"initNeuronParameters" : {
+		"OutRingLayer": {"vInit": -60},
+		"InnerRingLayer": {"vInit": -60}
+	},
+	"synParameters" : {
+		"OutRingLayer-InnerRingLayer": {
+			"initWeight": 6.0,
+			"delay": 1.0,
+			"receptor_type": "excitatory"},
+		"InnerRingLayer-InnerRingLayer": {
+			"initWeight": 0.5,
+			"delay": 1.0,
+			"receptor_type": "inhibitory"},
+		"InputLayer-OutRingLayer": {
+			"initWeight": 6.0,
+			"delay": 1.0,
+			"receptor_type": "excitatory"},
+		"InnerRingLayer-SWTAOutLayer": {
+			"initWeight": 6.0,
+			"delay": 1.0,
+			"receptor_type": "excitatory"}
+	}	
+}
